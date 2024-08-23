@@ -1,0 +1,47 @@
+{
+  "name": "koishi-plugin-fish-audio",
+  "description": "Text To Speech",
+  "version": "0.0.2",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idranme/koishi-plugin-fish-audio.git"
+  },
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin",
+    "fish",
+    "audio",
+    "speech",
+    "tts",
+    "vits"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.17.7"
+  },
+  "dependencies": {
+    "@ygoe/msgpack": "^1.0.3"
+  },
+  "devDependencies": {
+    "@initencounter/vits": "^0.0.3"
+  },
+  "koishi": {
+    "browser": true,
+    "service": {
+      "implements": [
+        "vits"
+      ]
+    },
+    "description": {
+      "en": "Text To Speech",
+      "zh": "文本转语音"
+    }
+  }
+}
