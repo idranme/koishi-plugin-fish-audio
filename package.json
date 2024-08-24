@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-fish-audio",
-  "description": "Text To Speech",
-  "version": "0.0.2",
+  "description": "Text-to-speech via Fish Audio API",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -40,8 +40,8 @@
       ]
     },
     "description": {
-      "en": "Text To Speech",
-      "zh": "文本转语音"
+      "en": "Text-to-speech via Fish Audio API",
+      "zh": "通过 Fish Audio API 进行文本转语音"
     }
   }
 }
