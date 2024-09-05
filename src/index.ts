@@ -1,5 +1,4 @@
 import { Context, h, Schema, Service } from 'koishi'
-import { serialize } from '@ygoe/msgpack'
 import type Vits from '@initencounter/vits'
 
 class Main extends Service implements Vits {
@@ -30,17 +29,15 @@ interface BaseParams {
 }
 
 async function generate(ctx: Context, input: string, x: BaseParams, key: string): Promise<h> {
-  const params = serialize({
+  const params = {
     text: input,
     format: 'wav',
-    reference_id: x.reference_id,
-    normalize: true
-  })
-  const data = new Blob([params], { type: 'application/msgpack' })
+    reference_id: x.reference_id
+  }
   try {
-    const res = await ctx.http.post<ArrayBuffer>('https://api.fish.audio/v1/tts', data, {
+    const res = await ctx.http.post<ArrayBuffer>('https://api.fish.audio/v1/tts', params, {
       headers: {
-        'api-key': key
+        'Authorization': `Bearer ${key}`
       }
     })
     return h.audio(res, 'audio/wav')

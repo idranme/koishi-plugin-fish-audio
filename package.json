@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-fish-audio",
   "description": "Text-to-speech via Fish Audio API",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -26,9 +26,6 @@
   "peerDependencies": {
     "koishi": "^4.17.7"
   },
-  "dependencies": {
-    "@ygoe/msgpack": "^1.0.3"
-  },
   "devDependencies": {
     "@initencounter/vits": "^0.0.3"
   },
@@ -41,7 +38,7 @@
     },
     "description": {
       "en": "Text-to-speech via Fish Audio API",
-      "zh": "通过 Fish Audio API 进行文本转语音"
+      "zh": "通过 Fish Audio API 进行文本转语音，支持 vits 服务"
     }
   }
 }
